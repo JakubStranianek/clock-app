@@ -18,8 +18,8 @@ export default function Time() {
 
     return (
     <div className='text-white flex items-end'>
-        <h1 className='text-8xl font-bold'>{clock}</h1>
-        <p className='text-[15px] pb-2 pl-2 font-extralight'>{zone}</p>
+        <h1 className='text-8xl font-bold md:text-[170px]'>{clock}</h1>
+        <p className='text-[15px] pb-2 pl-2 font-extralight md:text-3xl'>{zone}</p>
     </div>
   )
 }
