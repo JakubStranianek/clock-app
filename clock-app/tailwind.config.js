@@ -6,13 +6,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-dayMobile': "url('assets/mobile/bg-image-daytime.jpg')",
-        'bg-dayTablet': "url('assets/tablet/bg-image-daytime.jpg')",
-        'bg-dayDesktop': "url('assets/desktop/bg-image-daytime.jpg')",
-        'bg-nightMobile': "url('assets/mobile/bg-image-nighttime.jpg')",
-        'bg-nightTablet': "url('assets/tablet/bg-image-nighttime.jpg')",
-        'bg-nightDesktop': "url('assets/desktop/bg-image-nighttime.jpg')"
+        'dayMobile': "url('assets/mobile/bg-image-daytime.jpg')",
+        'dayTablet': "url('assets/tablet/bg-image-daytime.jpg')",
+        'dayDesktop': "url('assets/desktop/bg-image-daytime.jpg')",
+        'nightMobile': "url('assets/mobile/bg-image-nighttime.jpg')",
+        'nightTablet': "url('assets/tablet/bg-image-nighttime.jpg')",
+        'nightDesktop': "url('assets/desktop/bg-image-nighttime.jpg')"
       }
+    },
+    variants: {
+      fill: ['hover', 'focus'], // this line does the trick SVG
     },
   },
   plugins: [],

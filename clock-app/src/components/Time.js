@@ -7,7 +7,7 @@ export default function Time() {
     useEffect(() => {
       setInterval(() => {
         const date = new Date()
-        
+      
         setClock(date.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
