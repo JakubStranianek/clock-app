@@ -20,7 +20,6 @@ function App() {
   return (
     <div className={hour <= 17 ? "bg-dayMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-dayTablet lg:bg-dayDesktop" : 
     "bg-nightMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-nightTablet lg:bg-nightDesktop"}>
-      <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full z-10 bg-black opacity-50"></div>
 
       <div className="h-full w-11/12 mx-auto md:w-10/12 lg:w-3/4">
         <div className="relative z-50 h-full lg:w-full flex flex-col justify-between">
