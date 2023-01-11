@@ -60,8 +60,6 @@ function App() {
           </main>
         </div>
       </div>
-
-      {main ? <Popup setPopup={hour} sentTimezone={timezone} /> : ""}
     </div>
   );
 }
