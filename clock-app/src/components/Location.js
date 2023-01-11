@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from "axios"
 
-export default function Location() {
+export default function Location( {setTimezone} ) {
     const [countryCode, setCountryCode] = useState("");
     const [city, setCity] = useState("");
 
@@ -13,6 +13,7 @@ export default function Location() {
         let data = response.data;
           setCountryCode(data.country_code)
           setCity(data.city)
+          setTimezone(data.timezone)
       })
       .catch((error) => {
         console.log(error);

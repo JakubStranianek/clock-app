@@ -11,6 +11,7 @@ function App() {
   const date = new Date()
   const [hour] = useState(date.getHours())
   const [main, setMain] = useState(true);
+  const [timezone, setTimezone] = useState();
 
   useEffect(() => {
     setMain(!main)    
@@ -36,10 +37,10 @@ function App() {
                 <Welcome setWelcome={hour} />
 
                 <div className="py-4">
-                  <Time/>            
+                  <Time />            
                 </div>
 
-                <Location />
+                <Location setTimezone={setTimezone} />
               </div>
 
               <div className="pt-12 pb-10 md:pt-20 md:pb-16 lg:py-0">
@@ -50,7 +51,9 @@ function App() {
         </div>
       </div>
 
-      {main ? <Popup setPopup={hour} /> : ""}
+      {main ? 
+      <Popup setPopup={hour} sentTimezone={timezone} /> 
+      : ""}
     </div>
   );
 }
