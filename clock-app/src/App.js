@@ -21,8 +21,8 @@ function App() {
     <div
       className={
         hour <= 17
-          ? "bg-dayMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-dayTablet lg:bg-dayDesktop"
-          : "bg-nightMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-nightTablet lg:bg-nightDesktop"
+          ? "relative bg-dayMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-dayTablet lg:bg-dayDesktop"
+          : "relative bg-nightMobile bg-no-repeat bg-cover bg-center bg-blend-lighten h-screen md:bg-nightTablet lg:bg-nightDesktop"
       }
     >
       <div className="h-full w-11/12 mx-auto md:w-10/12 lg:w-3/4">
@@ -60,6 +60,7 @@ function App() {
           </main>
         </div>
       </div>
+      {main ? <Popup setPopup={hour} sentTimezone={timezone} /> : ""}
     </div>
   );
 }
